@@ -1,0 +1,11 @@
+export default [
+  {
+    path: '/network',
+    component: () => import('../views/network/network-list.vue'),
+    meta: {
+      name: '网元列表'
+    }
+  }
+]
+
+

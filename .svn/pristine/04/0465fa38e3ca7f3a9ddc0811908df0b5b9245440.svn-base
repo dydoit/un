@@ -1,0 +1,107 @@
+<template>
+  <div class="instruction">
+    <el-form size="small">
+      <div class="my-item-wrapper">
+        <el-form-item label="设备厂家：" required>
+        <el-select v-model="instructData.selectedVender">
+            <el-option v-for="item of venderList" :key="item.vendorId" :label="item.name" :value="item.venderCode"></el-option>
+        </el-select>
+        </el-form-item>
+        <el-form-item label="设备类型：" required>
+          <el-select v-model="instructData.selectedVender">
+              <el-option v-for="item of deviceTypes" :key="item.deviceId" :label="item.name" :value="item.deviceCode"></el-option>
+            </el-select>
+        </el-form-item>
+      </div>
+      <el-form-item label="指令名称：" required>
+        <el-input placeholder="请输入指令名称，不包含参数"></el-input>
+      </el-form-item>
+      <el-form-item label="指令中文名称：">
+        <el-input placeholder="请输入指令名称，不包含参数"></el-input>
+      </el-form-item>
+      <el-form-item label="指令类型：" required>
+        <div class="radio-group">
+          <el-radio>查询类</el-radio>
+          <el-radio>配置类</el-radio>
+          <el-radio>操作类</el-radio>
+          <el-radio>高危配置类</el-radio>
+          <el-radio>高危操作类</el-radio>
+        </div>
+      </el-form-item>
+      <el-form-item label="适用版本：">
+        <el-checkbox>版本1</el-checkbox>
+        <el-checkbox>版本2</el-checkbox>
+        <el-checkbox>版本3</el-checkbox>
+        <el-checkbox>版本4</el-checkbox>
+      </el-form-item>
+      <el-form-item label="指令说明：">
+        <el-input
+          type="textarea"
+          :rows="2"
+          placeholder="请输入内容"
+          v-model="instructData.textarea">
+        </el-input>
+      </el-form-item>
+      <el-form-item label="参数填写：">
+        <table>
+          <tr>
+            <td>参数</td>
+            <td>参数中文名称(选填)</td>
+            <td>参数是否必填</td>
+            <td>参数描述</td>
+          </tr>
+          <tr>
+            <td contenteditable="true" @blur="test">
+              {{text}}
+            </td>
+            <td>
+              <input type="text"/>
+            </td>
+            <td>
+              <input type="text"/>
+            </td>
+            <td>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </td>
+          </tr>
+        </table>
+      </el-form-item>
+    </el-form>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        venderList: [{name: '华为', venderId: '001', venderCode: 'abc'}],
+        deviceTypes: [{name: '移动互联网', deviceCode: '', deviceId: 'xxx'}],
+        instructData: {
+          selectedVender: '',
+          textarea: ''
+        },
+        text: '测试'
+      }
+    },
+    methods: {
+      test(e) {
+        console.log('触发没')
+        console.log(e.target.innerText)
+      }
+    },
+  }
+</script>
+
+<style lang="stylus" scoped>
+  .instruction
+    width 900px
+    margin-left 40px
+    padding-top 20px
+  .my-item-wrapper
+    display flex
+    justify-content space-between
+    .el-form-item
+      display flex
+  .el-form-item >>> .el-form-item__content
+    clear both
+</style>
