@@ -21,6 +21,13 @@ export default [
     }
   },
   {
+    path: '/my-task-add',
+    component: () => import('../views/my/task-add.vue'),
+    meta: {
+      name:'新增任务'
+    }
+  },
+  {
     path: '/my-instruction-temp',
     component:() =>import('../views/my/instuct-template.vue'),
     meta: {

@@ -39,19 +39,19 @@
           </el-select>
         </el-form-item>
       </div>
-      <el-form-item label="版本号:">
+      <el-form-item label="版本号:" class="my-item">
         <el-input></el-input>
         <span class="last-intro">示例：(V1.1)</span>
       </el-form-item>
-      <el-form-item label="模板名称:">
+      <el-form-item label="模板名称:" class="my-item-flex">
         <el-input></el-input>
       </el-form-item>
-      <el-form-item label="功能说明:">
+      <el-form-item label="功能说明:" class="my-item-flex">
         <el-input  type="textarea"
-        :rows="2"
+        :rows="4"
         placeholder="请输入内容"></el-input>
       </el-form-item>
-      <el-form-item>
+      <el-form-item label="占位" class="my-place">
         <el-button type="primary">保存</el-button>
         <el-button>下一步</el-button>
       </el-form-item>
@@ -87,8 +87,15 @@
   display: flex;
   >>> .el-form-item__label
     width 6em
+.my-item
   >>> .el-form-item__content
-    width 190px
+    width 198px
+.my-item-flex
+  >>> .el-form-item__content
+    flex 1
+.my-place
+  >>> label
+    opacity 0
 .last-intro
   position absolute
   right -90px
