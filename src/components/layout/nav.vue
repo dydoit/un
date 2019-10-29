@@ -1,5 +1,6 @@
 <template>
-  <el-menu
+  <div class="head">
+    <el-menu
       :default-active="activeIndex"
       class="el-menu-demo"
       mode="horizontal"
@@ -27,7 +28,18 @@
         <template slot="title">系统设置</template>
         <el-menu-item index="/setup/role-set">选项1</el-menu-item>
       </el-submenu>
-  </el-menu>
+    </el-menu>
+    <div class="user-wrapper">
+      <p>
+        <span>所在公司：广东联通</span>
+        <span>所属专业：无线网</span>
+      </p>
+      <div>
+        <el-avatar icon="el-icon-user-solid" size="small"></el-avatar>
+        <i>小龙女</i>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -55,5 +67,21 @@
 </script>
 
 <style lang="stylus" scoped>
-
+  .head
+    display flex
+    justify-content space-between
+    background-color rgb(84, 92, 100)
+  .user-wrapper
+    display flex
+    align-items center
+    color #fff
+    p
+      margin-right 30px
+      span
+        margin-left 16px
+    .el-avatar
+      vertical-align middle
+      margin-right 4px
+    div
+      padding-right 10px
 </style>

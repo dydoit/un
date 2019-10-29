@@ -27,10 +27,6 @@
         </el-checkbox>
       </el-checkbox-group>
     </div>
-    <div class="btn-wrapper">
-      <el-button type="primary">保存</el-button>
-      <el-button>取消</el-button>
-    </div>
   </el-dialog>
 </template>
 
@@ -57,9 +53,4 @@
 <style lang="stylus" scoped>
 .el-checkbox
   margin-bottom 10px
-.btn-wrapper
-  margin-top 40px
-  text-align center
-  .el-button
-    margin-right 20px
 </style>

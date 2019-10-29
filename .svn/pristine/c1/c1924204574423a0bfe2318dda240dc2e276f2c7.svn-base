@@ -64,10 +64,6 @@
         </template>
       </el-table-column>
     </el-table>
-    <!-- <div class="btn-wrapper">
-      <el-button type="primary">保存</el-button>
-      <el-button>取消</el-button>
-    </div> -->
     <network-list ref="netModel"></network-list>
     <task-step ref="stepModel"></task-step>
   </div>
@@ -143,9 +139,4 @@ export default {
 }
 .net-num
   cursor pointer
-.btn-wrapper
-  margin 20px 0
-  text-align center
-  .el-button
-    margin-right 20px
 </style>
