@@ -75,7 +75,6 @@
     },
     methods: {
       sub() {
-        console.log('sub')
         let way = []
         if(this.isEmail) {
           way.push('mail')
@@ -87,7 +86,6 @@
           way.push('wx')
         }
         this.form.noticeWay = way
-        console.log(this.form.noticeWay)
       }
     }
   }

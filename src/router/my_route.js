@@ -28,15 +28,22 @@ export default [
     }
   },
   {
+    path: '/task-add-step',
+    component:() => import('../views/my/task-add-step.vue'),
+    meta: {
+      name: '编辑任务步骤'
+    }
+  },
+  {
     path: '/my-instruction-temp',
-    component:() =>import('../views/my/instuct-template.vue'),
+    component:() => import('../views/my/instuct-template.vue'),
     meta: {
       name: '我的指令'
     }
   },
   {
     path: '/task-temp-add',
-    component:() =>import('../views/my/task-tem-add.vue'),
+    component:() => import('../views/my/task-tem-add.vue'),
     meta: {
       name: '我的任务模板'
     }
