@@ -1,14 +1,10 @@
 <template>
-  <div>
-    网元列表
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
   export default {
-    data() {
-      return {}
-    }
+    name: 'Content'
   }
 </script>
 

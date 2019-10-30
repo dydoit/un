@@ -22,7 +22,7 @@
                 </template>
               </el-table-column>
             </el-table>
-            </div>           
+            </div>
           </template>
         </el-table-column>
         <el-table-column align="center" prop="name" label="模板名称" width="200"></el-table-column>
@@ -78,7 +78,7 @@
     methods:{
       //新增
       handleAdd(){
-        this.$router.push({path:'/instruct-edit', query:{typePage:'1'}})
+        this.$router.push({path:'/my-instruction-temp/temp-manage', query:{typePage:'1'}})
       },
     },
     mounted(){

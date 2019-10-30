@@ -51,11 +51,13 @@
       };
     },
     created() {
-      this.activeIndex = this.$route.path
+      console.log(this.$route)
+      this.activeIndex = this.$route.meta.parentPath
     },
    watch: {
-     "$route.path"(newV) {
-       this.activeIndex = newV
+     "$route.meta"(newV) {
+       console.log('newV', newV)
+       this.activeIndex = newV.parentPath
      }
    },
     methods: {

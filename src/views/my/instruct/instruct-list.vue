@@ -1,5 +1,5 @@
 <template>
-  <div class="instruction">
+  <div class="instruct-list">
     <el-form :inline="true" :model="queryData" size="small" label-width="6em">
       <el-form-item label="厂家:" >
           <el-select v-model="queryData.selectedVender">
@@ -28,7 +28,7 @@
       <el-button class="btn-search" icon="el-icon-search" size="small" type="primary">搜索</el-button>
     </el-form>
     <p>
-      <el-button type="primary" icon="el-icon-plus" size="small" @click="$router.push('/instruct-manage')">新增指令</el-button>
+      <el-button type="primary" icon="el-icon-plus" size="small" @click="$router.push('/my-instruction/instruct-manage')">新增指令</el-button>
     </p>
     <div class="content">
       <div class="item">
@@ -43,7 +43,7 @@
           </dd>
         </dl>
         <div class="btn-group">
-          <el-button size="small" type="text">编辑</el-button>
+          <el-button size="small" type="text" @click="edit">编辑</el-button>
           <el-button size="small" type="text">删除</el-button>
         </div>
       </div>
@@ -70,7 +70,7 @@
 
 <script>
   export default {
-    name:'instruction',
+    name:'instructList',
     data() {
       return {
         venderList: [{name: '华为', venderId: '001', venderCode: 'abc'}],
@@ -85,6 +85,10 @@
         tableData:[{
 
         }]
+      }
+    },
+    methods: {
+      edit() {
       }
     },
   }

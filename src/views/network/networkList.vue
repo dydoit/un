@@ -8,7 +8,7 @@
         <el-form-item label="所属分公司">
           <el-select v-model="SearchFrom.equipmentCity">
             <el-option label="全部" value></el-option>
-            <el-option v-for="(item,index) in equipmentCityDict" 
+            <el-option v-for="(item,index) in equipmentCityDict"
                 :key="index"
                 :label="item.dictNameZh"
                 :value="item.dictValue"></el-option>
@@ -17,7 +17,7 @@
         <el-form-item label="所属专业">
           <el-select v-model="SearchFrom.profession">
             <el-option label="全部" value></el-option>
-            <el-option v-for="(item,index) in professionDict" 
+            <el-option v-for="(item,index) in professionDict"
                 :key="index"
                 :label="item.dictNameZh"
                 :value="item.dictValue"></el-option>
@@ -95,7 +95,7 @@ export default {
             dictValue:'ddddd',
             dictName:'ddddd',
             dicttext:'ddddd'
-            } 
+            }
         ],
         equipmentCityDict:[],
         professionDict:[],
@@ -109,11 +109,11 @@ export default {
     searchFun() {},
     //详情
     handleDetail(item){
-      this.$router.push({path:'networkDetail',query:{id:item.id}})
+      this.$router.push({path:'/network/networkDetail',query:{id:item.id}})
     },
     //新增
     handleAdd(){
-      this.$router.push('networkAdd')
+      this.$router.push('/network/networkAdd')
     },
     //删除
     handleDelete(){},
@@ -134,8 +134,8 @@ export default {
   display flex
   justify-content space-between
   .btn-left
-    display flex 
+    display flex
     justify-content flex-start
-.table-wrapper 
+.table-wrapper
   padding 0 20px
 </style>
